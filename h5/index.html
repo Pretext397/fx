@@ -513,7 +513,7 @@
 									style="text-align: center;line-height: 6vw;margin-top: 3vw;">
 									获得笔试资格人员名单
 								</div>
-								<a class="fjxz" href="./fj/fujian2.xls"
+								<a class="fjxz" href="./fj/list.xls"
 									download="获得笔试资格人员名单.xls">点击下载附件</a>
 
 							</div>
@@ -811,6 +811,17 @@
 			wx.onMenuShareQQ(shareData)
 			wx.onMenuShareQZone(shareData)
 		})
+	</script>
+	<script>
+		function downloadXLS(fileName, fileExt) {
+			const url = 'example.xls';
+			const link = document.createElement('a');
+			link.href = url;
+			link.download = `${fileName}.${fileExt}`;
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+		}
 	</script>
 </body>
 
